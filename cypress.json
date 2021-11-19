@@ -1,1 +1,6 @@
-{}
+{
+    "env": {
+        "BASE_URL": "https://701523.commercesuite.com.br"
+    }
+        
+}
