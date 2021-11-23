@@ -1,3 +1,7 @@
-import { fakerBr } from 'js-brasil';
-const cep = fakerBr.cep();
+import Cad from "../pages/cadastro.page";
 
+describe('testes para cadastros', () => { 
+    it('Cadastro de pessoa', () => {
+        Cad.criarCadastro()
+    })
+ })
