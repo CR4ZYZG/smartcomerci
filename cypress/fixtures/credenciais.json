@@ -1,6 +1,20 @@
 {
-  "name": "Leda",
-  "dataNascimento": "Wed Sep 29 1920 18:39:36 GMT-0300 (Horário Padrão de Brasília)",
-  "CPF": "212.926.110-81",
-  "TF": "(377) 877-9101"
+  "valido": {
+    "nome": "Nair Souza",
+    "DN": "24/11/2021",
+    "cpf": "807.775.872-03",
+    "TF": "(95)52077454",
+    "TC": "(55)574327203",
+    "email": "Ademar20@yahoo.com",
+    "senha": "ETU8Go0yUTu32Bb"
+  },
+  "invalido": {
+    "nome": "Land Cruiser",
+    "DN": "24/11/2021",
+    "cpf": "561.769.079-50",
+    "TF": "Washington",
+    "TC": "(65) 18799-8152",
+    "email": "Idalia_Carvalho@gmail.com",
+    "senha": "QzK1DZ3YXVj56nE"
+  }
 }

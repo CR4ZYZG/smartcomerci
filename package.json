@@ -21,6 +21,7 @@
   "devDependencies": {
     "cypress": "8.7",
     "faker": "^5.5.3",
+    "faker-br": "^0.4.1",
     "js-brasil": "^2.5.1",
     "mochawesome": "^7.0.1"
   }

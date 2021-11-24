@@ -1,7 +1,12 @@
 import Cad from "../pages/cadastro.page";
 
 describe('testes para cadastros', () => { 
-    it('Cadastro de pessoa', () => {
-        Cad.criarCadastro()
+    before(() => {
+        Cad.visit()
     })
- })
+
+    it('Cadastro de pessoas validas e invalidas', () => {
+        Cad.criarCadastro()
+        Cad.cadastrarUsuario()
+    }) 
+})
