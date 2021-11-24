@@ -1,20 +1,24 @@
 {
   "valido": {
-    "nome": "Nair Souza",
+    "nome": "Odenir Xavier",
     "DN": "24/11/2021",
-    "cpf": "807.775.872-03",
-    "TF": "(95)52077454",
-    "TC": "(55)574327203",
-    "email": "Ademar20@yahoo.com",
-    "senha": "ETU8Go0yUTu32Bb"
+    "cpf": "109.494.670-22",
+    "TF": "(43)59636621",
+    "TC": "(63)985585520",
+    "email": "Lgia86@yahoo.com",
+    "senha": "DGDmuDSt6Ayl8kn"
   },
   "invalido": {
-    "nome": "Land Cruiser",
+    "nome": "LeBaron",
     "DN": "24/11/2021",
-    "cpf": "561.769.079-50",
-    "TF": "Washington",
-    "TC": "(65) 18799-8152",
-    "email": "Idalia_Carvalho@gmail.com",
-    "senha": "QzK1DZ3YXVj56nE"
+    "cpf": "263.607.061-30",
+    "TF": "Marketing",
+    "TC": "(48) 77297-7669",
+    "email": "Thaiza17@yahoo.com",
+    "senha": "kZYsofzpsyxY2lY"
+  },
+  "endereço": {
+    "cep": "69046-844",
+    "numero": "54785"
   }
 }

@@ -16,24 +16,29 @@ export default class Cad extends Base {
         cy.writeFile('cypress/fixtures/credenciais.json', {
             'valido' :
                 {
-                "nome": `${fakerbr.name.firstName()} ${fakerbr.name.lastName()}`,
-                "DN": `${fakerBr.data()}`,
-                "cpf": `${fakerBr.cpf()}`,
+                'nome': `${fakerbr.name.firstName()} ${fakerbr.name.lastName()}`,
+                'DN': `${fakerBr.data()}`,
+                'cpf': `${fakerBr.cpf()}`,
                 'TF': `${faker.phone.phoneNumber('(##)5#######')}`,
-                'TC': `${faker.phone.phoneNumber('(##)#########')}`,
-                "email": `${fakerbr.internet.email()}`,
-                "senha": `${faker.internet.password()}`
+                'TC': `${faker.phone.phoneNumber('(##)9########')}`,
+                'email': `${fakerbr.internet.email()}`,
+                'senha': `${faker.internet.password()}`
             },
 
             'invalido' :
                {
-                "nome": `${faker.vehicle.model()}`,
-                "DN": `${fakerBr.data()}`,
-                "cpf": `${fakerBr.cpf()}`,
+                'nome': `${faker.vehicle.model()}`,
+                'DN': `${fakerBr.data()}`,
+                'cpf': `${fakerBr.cpf()}`,
                 'TF': `${faker.random.word()}`,
                 'TC': `${faker.phone.phoneNumber('(##) #####-####')}`,
-                "email": `${fakerbr.internet.email()}`,
-                "senha": `${faker.internet.password()}`
+                'email': `${fakerbr.internet.email()}`,
+                'senha': `${faker.internet.password()}`
+            },
+
+            'endereço':{
+                'cep': `${fakerBr.cep()}`,
+                'numero': `${faker.datatype.number()}`
             }
             
           })
@@ -64,17 +69,6 @@ export default class Cad extends Base {
             super.typeValue(U.INP_SENHA2, credenciais.valido.senha)
             super.validarElemento(U.BTN_AVANÇAR)
             super.clickOnElement(U.BTN_AVANÇAR)
-        })
-    }
-
-    static gerarCep() {
-        cy.writeFile('cypress/fixtures/endereco.json',  {
-        'valido' :
-            {
-            "cep": `${fakerBr.cep()}`,
-            "numero": `${faker.datatype.number()}`
-            }
-        
         })
     }
 

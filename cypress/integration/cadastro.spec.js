@@ -8,5 +8,6 @@ describe('testes para cadastros', () => {
     it('Cadastro de pessoas validas e invalidas', () => {
         Cad.criarCadastro()
         Cad.cadastrarUsuario()
+        
     }) 
 })
