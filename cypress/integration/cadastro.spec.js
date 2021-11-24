@@ -1,13 +1,19 @@
 import Cad from "../pages/cadastro.page";
 
 describe('testes para cadastros', () => { 
-    before(() => {
+    beforeEach(() => {
         Cad.visit()
     })
 
-    it('Cadastro de pessoas validas e invalidas', () => {
+    it.only('Cadastro de pessoas fisica valida', () => {
         Cad.criarCadastro()
+        Cad.validarCampos()
         Cad.cadastrarUsuario()
-        
-    }) 
+        cy.wait(3000)  
+    })
+
+    it('cadastro de pessoa fisica incoreta', ()=>{
+        Cad.validarCampos()
+        Cad.cadastrarUsuarioIncoreto()
+    })
 })

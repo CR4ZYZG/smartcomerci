@@ -1,0 +1,1 @@
+após adicionar um produto no carrinho, ao tentar diminuir a quantidade abaixo de "1" a pagina do carrinho se abre automaticamente para finalizar a compra.
