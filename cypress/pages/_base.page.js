@@ -89,7 +89,7 @@ export default class Base{
     }
   
     static validarUrl(url){
-      cy.url(`${Cypress.env('baseURL_front')}`).should('include', url) 
+      cy.url(`${Cypress.env('BASE_URL')}`).should('include', url) 
     }
   
     static validarElemento(elemento, index){

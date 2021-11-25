@@ -2,25 +2,31 @@
 
 
 import Cad from '../pages/cadastro.page.js'
-import CSCadastro from '../pages/sm_cadastro.page.js'
-import CSLogin from '../pages/sm_login.page.js'
+import Logar from '../pages/login.page.js'
 
 
-describe('Testes de login/Positivos', () => {
+describe('Testes de login ', () => {
     before(() => {
         Cad.visit()
     })
     it('Deve logar uma pessoa física com sucesso', () => {
-        CSCadastro.validarUrl(`${Cypress.env('baseURL')}`)
-        CSLogin.validarEntrarLogin()  
-        CSLogin.logar() 
-        cy.wait(10000)
-        CSLogin.validarLogin()  
+        Cad.validarUrl(`${Cypress.env('BASE_URL')}`)
+        Logar.logar() 
+        cy.wait(3000)
+        
+        
     })
-})
 
-describe('Testes de login/Negativos', () => {
+    it('Deve deslogar o usuário', ()=>{
+        Logar.logout()
+        cy.wait(3000)
+        Cad.validarUrl('/loja')
+    })
+
     it('Deve tentar logar um usuário não cadastrado', () => {
-        CSLogin.logarInvalido()
+        Cad.validarUrl(`${Cypress.env('BASE_URL')}`)
+        Logar.logarInvalido()
+        cy.wait(4000)
+        
     })
 })

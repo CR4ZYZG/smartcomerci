@@ -19,8 +19,8 @@ export default class Cad extends Base {
                 'nome': `${fakerbr.name.firstName()} ${fakerbr.name.lastName()}`,
                 'DN': `${fakerBr.data()}`,
                 'cpf': `${fakerBr.cpf()}`,
-                'TF': `${faker.phone.phoneNumber('(##)3#######')}`,
-                'TC': `${faker.phone.phoneNumber('(##)9########')}`,
+                'TF': `${faker.phone.phoneNumber('(11)3#######')}`,
+                'TC': `${faker.phone.phoneNumber('(21)9########')}`,
                 'email': `${fakerbr.internet.email()}`,
                 'senha': `${faker.internet.password()}`
             },
@@ -29,8 +29,8 @@ export default class Cad extends Base {
                 'nome': `${faker.vehicle.model()}`,
                 'DN': `${fakerBr.data()}`,
                 'cpf': `${fakerBr.cpf()}`,
-                'TF': `${faker.phone.phoneNumber('(##) #####-####')}`,
-                'TC': `${faker.phone.phoneNumber('(##) #####-####')}`,
+                'TF': `${faker.phone.phoneNumber('(##)6###-####')}`,
+                'TC': `${faker.phone.phoneNumber('(##)2####-####')}`,
                 'email': `${fakerbr.internet.email()}`,
                 'senha': `${faker.internet.password()}`
             },
@@ -88,5 +88,9 @@ export default class Cad extends Base {
             super.validarElemento(U.BTN_AVANÇAR)
             super.clickOnElement(U.BTN_AVANÇAR)
         })
+    }
+
+    static validarUrl(url) {
+        super.validarUrl(url)
     }
 }

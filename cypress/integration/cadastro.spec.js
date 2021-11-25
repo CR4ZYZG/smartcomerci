@@ -5,7 +5,7 @@ describe('testes para cadastros', () => {
         Cad.visit()
     })
 
-    it.only('Cadastro de pessoas fisica valida', () => {
+    it('Cadastro de pessoas fisica valida', () => {
         Cad.criarCadastro()
         Cad.validarCampos()
         Cad.cadastrarUsuario()
