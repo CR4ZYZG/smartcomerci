@@ -1,0 +1,28 @@
+{
+  "name": "smartcomerci",
+  "version": "1.0.0",
+  "description": "projeto final PB_automação",
+  "main": "index.js",
+  "scripts": {
+    "cy.run": "cypress run",
+    "cy.open": "cypress open --config watchForFileChanges=false",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CR4ZYZG/smartcomerci.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CR4ZYZG/smartcomerci/issues"
+  },
+  "homepage": "https://github.com/CR4ZYZG/smartcomerci#readme",
+  "devDependencies": {
+    "cypress": "8.7",
+    "faker": "^5.5.3",
+    "faker-br": "^0.4.1",
+    "js-brasil": "^2.5.1",
+    "mochawesome": "^7.0.1"
+  }
+}

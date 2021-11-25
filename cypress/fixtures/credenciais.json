@@ -1,0 +1,24 @@
+{
+  "valido": {
+    "nome": "Jaqueline Pereira",
+    "DN": "25/11/2021",
+    "cpf": "147.654.516-23",
+    "TF": "(11)35270493",
+    "TC": "(21)906161269",
+    "email": "Suzan_Oliveira99@hotmail.com",
+    "senha": "NLbfQxJJ2qJ_GpK"
+  },
+  "invalido": {
+    "nome": "Camry",
+    "DN": "25/11/2021",
+    "cpf": "591.507.070-19",
+    "TF": "(06)6716-8175",
+    "TC": "(86)20474-0563",
+    "email": "Fabrizio.Pereira@gmail.com",
+    "senha": "JcO_KnnbJMF3_xR"
+  },
+  "endereço": {
+    "cep": "72865-303",
+    "numero": "54375"
+  }
+}
