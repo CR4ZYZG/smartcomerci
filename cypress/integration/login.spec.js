@@ -5,7 +5,7 @@ import Cad from '../pages/cadastro.page.js'
 import Logar from '../pages/login.page.js'
 
 
-describe('Testes de login ', () => {
+describe('Testes de login no Mercado Online', () => {
     before(() => {
         Cad.visit()
     })

@@ -1,6 +1,8 @@
+/// <reference types="cypress" />
+
 import Cad from "../pages/cadastro.page";
 
-describe('testes para cadastros', () => { 
+describe('Testes de cadastros no Mercado Online', () => { 
     beforeEach(() => {
         Cad.visit()
     })

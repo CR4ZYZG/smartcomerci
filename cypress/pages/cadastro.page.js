@@ -37,7 +37,12 @@ export default class Cad extends Base {
             'endereço': {                
                 'cep': `${fakerBr.cep()}`,
                 'numero': `${faker.datatype.number()}`
-            }  
+            },  
+
+            'endereço2': {
+                'cep': '01153-000', 
+                'numero': `${faker.datatype.number()}`
+            }
         })
     }
 
