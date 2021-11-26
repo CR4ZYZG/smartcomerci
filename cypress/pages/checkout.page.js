@@ -1,5 +1,6 @@
 import Base from './_base.page';
 import { CHECK } from './components/checkout.elements';
+import { expect } from 'chai';
 
 export default class Checkout extends Base {
     static validarProduto() {
@@ -40,12 +41,12 @@ export default class Checkout extends Base {
     }
 
     static validarCheckout(){
-        super.getElementText('.ch-input.ch-input-disabled.ch-text-center.ch-vspace-sm').then((texto) => {
+        super.validateText('.ch-input.ch-input-disabled.ch-text-center.ch-vspace-sm').then((texto) => {
             if(texto.includes('CPF')){
                 this.confirmarCpf()
             }
             else if(texto.includes('nome')){
-                this.confirmarNome()
+                this.confirmarSobrenome()
             }
             else if(texto.includes('sobrenome')){
                 this.confirmarSobrenome()
@@ -59,16 +60,52 @@ export default class Checkout extends Base {
         cy.readFile(`cypress/fixtures/credenciais.json`).then((credenciais) => {
             
         
-            if(CHECK.ITEM1.include(credenciais.valido.TF)){
+            if(cy.get(CHECK.ITEM1).contains(credenciais.valido.TC)){
                 super.clickOnElement(CHECK.ITEM1)
             }
-            else if(CHECK.ITEM2.include(credenciais.valido.TF)){
+            else if(cy.get(CHECK.ITEM2).contains(credenciais.valido.TC)){
                 super.clickOnElement(CHECK.ITEM2)
             }
-            else if(CHECK.ITEM3.include(credenciais.valido.TF)){
+            else if(cy.get(CHECK.ITEM3).contains(credenciais.valido.TC)){
                 super.clickOnElement(CHECK.ITEM3)
             }
             
         })  
     }
+
+
+    static confirmarSobrenome() {
+        cy.readFile(`cypress/fixtures/credenciais.json`).then((credenciais) => {
+            
+        
+            if(cy.get(CHECK.ITEM1).contains(credenciais.valido.nome)){
+                super.clickOnElement(CHECK.ITEM1)
+            }
+            else if(cy.get(CHECK.ITEM2).contains(credenciais.valido.nome)){
+                super.clickOnElement(CHECK.ITEM2)
+            }
+            else if(cy.get(CHECK.ITEM3).contains(credenciais.valido.nome)){
+                super.clickOnElement(CHECK.ITEM3)
+            }
+            
+        })  
+    }
+
+    static confirmarCpf() {
+        cy.readFile(`cypress/fixtures/credenciais.json`).then((credenciais) => {
+            
+        
+            if(cy.get(CHECK.ITEM1).contains(credenciais.valido.cpf)){
+                super.clickOnElement(CHECK.ITEM1)
+            }
+            else if(cy.get(CHECK.ITEM2).contains(credenciais.valido.cpf)){
+                super.clickOnElement(CHECK.ITEM2)
+            }
+            else if(cy.get(CHECK.ITEM3).contains(credenciais.valido.cpf)){
+                super.clickOnElement(CHECK.ITEM3)
+            }
+            
+        })  
+    }
+
 }

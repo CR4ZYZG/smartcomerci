@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/CR4ZYZG/smartcomerci#readme",
   "devDependencies": {
+    "chai": "^4.3.4",
     "cypress": "8.7",
     "faker": "^5.5.3",
     "faker-br": "^0.4.1",
