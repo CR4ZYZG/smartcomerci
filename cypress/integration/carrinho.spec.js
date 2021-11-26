@@ -5,13 +5,13 @@ import Logar from '../pages/login.page.js'
 import Cart from '../pages/carrinho.page'
 
 
-describe('Testes de login ', () => {
+describe('Testes de Carrinho no Mercado Online', () => {
     before(() => {
         Cad.visit()
         Logar.logar()
         cy.wait(3000)
     })
-    it.only('Deve adicionar alguns produtos ao carrinho e abrir a pagina de checkout', () => {
+    it('Deve adicionar alguns produtos ao carrinho e abrir a pagina de checkout', () => {
         
         cy.wait(5000)
         Cart.adicionarCarrinho()

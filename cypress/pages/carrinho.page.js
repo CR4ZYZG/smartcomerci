@@ -41,8 +41,8 @@ export default class Cart extends Base {
 
     static abrirCarrinho(){
         cy.get(COMPRAR.BTN_ABREMODAL).trigger('mouseover')
-        cy.wait(50)
-        super.clickOnElement(COMPRAR.BTN_CHECKOUT)
+    
+        cy.get(COMPRAR.BTN_CHECKOUT).click({ force: true })
         
     }
 }

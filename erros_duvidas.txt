@@ -4,6 +4,8 @@ idependente da quantidade adicionada ao carrinho, se clicar no botão para dimin
 
 abre-se apagina do carrinho com o valor dos produtos, mas ainda mostrando que o carrinho está vazio
 
+botão de acesso ao carrinho pelo modal "detached from DOM"
+
 erros de "canceled" durante o carregamento da pagina 
 
 feramenta de conferir atendimento à região não atende região nenhuma...

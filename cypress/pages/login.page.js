@@ -30,6 +30,7 @@ export default class Logar extends Base {
             super.typeValue(LG.INP_SENHA, credenciais.valido.senha)
         })
         super.clickOnElement(LG.BTN_CONTINUARSENHA)
+        cy.wait(3000)
         super.verifyIfElementExists(LG.ICN_USER)
     }
 
