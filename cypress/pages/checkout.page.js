@@ -10,7 +10,7 @@ export default class Checkout extends Base {
     static selecionarRetirada() {
         super.validarElemento(CHECK.INP_CEPCART)
         cy.readFile(`cypress/fixtures/credenciais.json`).then((credenciais) => {
-            super.typeValue(CHECK.INP_CEPCART,  credenciais.endereço.cep)
+            super.typeValue(CHECK.INP_CEPCART,  credenciais.endereço2.cep)
         })
         cy.scrollTo(0, 100)
         super.validarElemento(CHECK.CBOX_RETIRAR)
@@ -41,71 +41,49 @@ export default class Checkout extends Base {
     }
 
     static validarCheckout(){
-        super.validateText('.ch-input.ch-input-disabled.ch-text-center.ch-vspace-sm').then((texto) => {
-            if(texto.includes('CPF')){
-                this.confirmarCpf()
-            }
-            else if(texto.includes('nome')){
-                this.confirmarSobrenome()
-            }
-            else if(texto.includes('sobrenome')){
-                this.confirmarSobrenome()
-            }
-            else {
-                this.confirmarTelefone()
-            }
+        cy.readFile(`cypress/fixtures/credenciais.json`).then((credenciais) => {
+            cy.get(CHECK.TXT_CONFIRM).then(security => {
+                super.getElementText(security)
+
+                let botao = ''
+
+                if (security.find("p:contains('Quais os primeiros dígitos do seu CPF?')").lenght > 0) {
+                    cy.log(botao)
+                    let botao = credenciais.valido.cpf.slice(0, 6)
+                    cy.log(botao)
+                }
+
+                else if (security.find("p:contains('Qual o seu sobrenome?')").lenght > 0) {
+                    cy.log(botao)
+                    let botao = credenciais.valido.nome.split(' ')[1]
+                    cy.log(botao)
+                }
+
+                else if (security.find("p:contains('Quais os últimos dígitos do seu CPF?')").lenght > 0) {
+                    cy.log(botao)
+                    let botao = credenciais.valido.cpf.slice(-6)
+                    cy.log(botao)
+                }
+
+                else if (security.find("p:contains('Qual o seu endereço de entrega?')").length > 0) {
+                    cy.log(botao)
+                    let botao = credenciais.valido.nome.split(' ')[3]
+                    cy.log(botao)
+                }
+
+                else if (security.find("p:contains('Quais os primeiros digitos do seu telefone?')").length > 0) {
+                    cy.log(botao)
+                    let botao = credenciais.valido.TC.substring(1, 6)
+                    cy.log(botao)
+                }
+                
+                console.log(botao)
+                
+
+                cy.wait(4000)
+                super.getElement(CHECK.ITEM).contains(botao).click()
+                cy.wait(4000)
+            })
         })
     }
-    static confirmarTelefone() {
-        cy.readFile(`cypress/fixtures/credenciais.json`).then((credenciais) => {
-            
-        
-            if(cy.get(CHECK.ITEM1).contains(credenciais.valido.TC)){
-                super.clickOnElement(CHECK.ITEM1)
-            }
-            else if(cy.get(CHECK.ITEM2).contains(credenciais.valido.TC)){
-                super.clickOnElement(CHECK.ITEM2)
-            }
-            else if(cy.get(CHECK.ITEM3).contains(credenciais.valido.TC)){
-                super.clickOnElement(CHECK.ITEM3)
-            }
-            
-        })  
-    }
-
-
-    static confirmarSobrenome() {
-        cy.readFile(`cypress/fixtures/credenciais.json`).then((credenciais) => {
-            
-        
-            if(cy.get(CHECK.ITEM1).contains(credenciais.valido.nome)){
-                super.clickOnElement(CHECK.ITEM1)
-            }
-            else if(cy.get(CHECK.ITEM2).contains(credenciais.valido.nome)){
-                super.clickOnElement(CHECK.ITEM2)
-            }
-            else if(cy.get(CHECK.ITEM3).contains(credenciais.valido.nome)){
-                super.clickOnElement(CHECK.ITEM3)
-            }
-            
-        })  
-    }
-
-    static confirmarCpf() {
-        cy.readFile(`cypress/fixtures/credenciais.json`).then((credenciais) => {
-            
-        
-            if(cy.get(CHECK.ITEM1).contains(credenciais.valido.cpf)){
-                super.clickOnElement(CHECK.ITEM1)
-            }
-            else if(cy.get(CHECK.ITEM2).contains(credenciais.valido.cpf)){
-                super.clickOnElement(CHECK.ITEM2)
-            }
-            else if(cy.get(CHECK.ITEM3).contains(credenciais.valido.cpf)){
-                super.clickOnElement(CHECK.ITEM3)
-            }
-            
-        })  
-    }
-
 }

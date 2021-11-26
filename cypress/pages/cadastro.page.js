@@ -26,9 +26,9 @@ export default class Cad extends Base {
             },
             'invalido' :
                {
-                'nome': `${faker.vehicle.model()}`,
+                'nome': `${fakerbr.name.firstName()} ${fakerbr.name.lastName()} `,
                 'DN': `${fakerBr.data()}`,
-                'cpf': `${fakerBr.cpf()}`,
+                'cpf': `${faker.random.word()}`,
                 'TF': `${faker.phone.phoneNumber('(##)6###-####')}`,
                 'TC': `${faker.phone.phoneNumber('(##)2####-####')}`,
                 'email': `${fakerbr.internet.email()}`,
@@ -92,6 +92,7 @@ export default class Cad extends Base {
             super.typeValue(U.INP_SENHA2, credenciais.invalido.senha)
             super.validarElemento(U.BTN_AVANÇAR)
             super.clickOnElement(U.BTN_AVANÇAR)
+            super.validarElemento(U.INP_ERROCPF)
         })
     }
 

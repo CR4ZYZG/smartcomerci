@@ -11,10 +11,8 @@ export const CHECK = {
     BTN_LOCALIZARENDERECO: '#btnFindAddress',
     INP_NMR: '#customer-address-number',
     BTN_SALAVARDADOS: '#form-shipping div:nth-child(4) button',
-    TXT_CONFIRM: 'div.ch-input.ch-input-disabled.ch-text-center.ch-vspace-sm > p',
+    TXT_CONFIRM: '.ch-input.ch-input-disabled.ch-text-center.ch-vspace-sm',
 
     
-    ITEM1: '#value-0',
-    ITEM2: '#value-1',
-    ITEM3: '#value-2',
+    ITEM: '[class*=secret-answer]'
 }
