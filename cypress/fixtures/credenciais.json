@@ -1,28 +1,28 @@
 {
   "valido": {
-    "nome": "Nilson Reis",
+    "nome": "Alecio Braga",
     "DN": "26/11/2021",
-    "cpf": "159.512.012-25",
-    "TF": "(11)36017302",
-    "TC": "(21)923560441",
-    "email": "Oduvaldo_Nogueira@gmail.com",
-    "senha": "aW9DgpSoyXIF2b4"
+    "cpf": "895.411.981-63",
+    "TF": "(11)35810146",
+    "TC": "(21)944575750",
+    "email": "Oduvaldo70@gmail.com",
+    "senha": "c8qaPXZJe_IT_B7"
   },
   "invalido": {
-    "nome": "Annibal Braga ",
+    "nome": "Carmencita Albuquerque ",
     "DN": "26/11/2021",
-    "cpf": "programming",
-    "TF": "(28)6050-7338",
-    "TC": "(91)22958-8379",
-    "email": "Maristela.Barros@hotmail.com",
-    "senha": "qgQYz_5cXIDaU7N"
+    "cpf": "Keys",
+    "TF": "(57)6776-9658",
+    "TC": "(26)22467-8659",
+    "email": "Laurindo_Franco@hotmail.com",
+    "senha": "6kqQZ7XH8mIF8c5"
   },
   "endereço": {
-    "cep": "69067-154",
-    "numero": "54485"
+    "cep": "29469-814",
+    "numero": "82639"
   },
   "endereço2": {
     "cep": "01153-000",
-    "numero": "62208"
+    "numero": "17639"
   }
 }
